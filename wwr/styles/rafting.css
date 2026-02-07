@@ -1,12 +1,8 @@
 :root {
-    --primary-color: #055a05;
-
-    --secondary-color: #f4a261;
-
-    --accent1-color: #264653;
-
-    --accent2-color: #e9c46a;
-
+    --primary-color: #147ce4;
+    --secondary-color: #0066cc;
+    --accent1-color: #e6f2ff;
+    --accent2-color: #344b9b;
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -23,112 +19,171 @@ body {
 }
 
 header,
-main,
+.history-container,
+.adventure-gallery,
 footer {
-    max-width: 840px;
+    margin: 1rem auto;
+    max-width: 960px;
+
+    border: 1px solid rgba(251, 251, 251, 0.871);
+    padding: 1rem;
+    background-color: #3846b0;
+    color: #eeeeee;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+
+    align-items: center;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+    justify-self: start;
+}
+
+nav {
+    display: center;
+    justify-content: flex-end;
+
+    gap: 2rem;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    background-color: #fff;
+
+    padding: 0.5rem 1.5rem;
+
+    border: 1px solid #777;
+
+    margin-left: -1px;
+
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--accent2-color);
+    /* Cambia al amarillo arena del sitio */
+    color: var(--accent1-color);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    position: relative;
+    max-width: 960px;
     margin: 0 auto;
 }
 
-h1,
-h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-}
-
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
-.hero {
-    position: relative;
-    margin-top: 20px;
-}
-
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-h1 {
+.hero h1 {
     position: absolute;
-    top: 10px;
-    width: 100%;
-    padding: 16px;
+    top: 20px;
+    width: 106.60%;
+    background-color: rgba(38, 45, 83, 0.8);
+    color: white;
     text-align: center;
-    background-color: var(--accent1-color);
-    color: #fff;
-
-    opacity: 0.9;
+    padding: 10px;
+    font-family: var(--heading-font);
 }
 
 .hero article {
     position: absolute;
-
-    top: 70%;
+    bottom: 20px;
     left: 50px;
     right: 50px;
     background-color: var(--accent2-color);
-    opacity: 0.9;
-    padding: 10px;
-
+    padding: 1rem;
+    display: flex;
+    align-items: center;
     border: 1px solid var(--accent1-color);
 }
 
 .hero article img {
-    float: right;
-    width: 125px;
-    margin-left: 15px;
-
+    width: 150px;
+    margin-right: 15px;
+    /* Imagen a la izquierda del texto */
 }
 
-section h2 {
-
+/* --- HISTORY SECTION (Instrucción 7) --- */
+.history h2 {
     text-align: center;
+    margin: 2rem auto 0 auto;
+    color: white;
+    background-color: rgba(38, 45, 83, 0.8);
+    width: 900px;
+    max-width: 100%;
+    padding: 15px;
 
-    background-color: var(--accent1-color);
-
-    color: #ffffff;
-
-    padding: 15px 0;
-
-    font-family: var(--heading-font);
-
-    margin: 20px 0;
-
-    font-size: 2rem;
 }
 
-section p {
+.history-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* 3 columnas: Texto | Imagen | Texto */
+    gap: 20px;
+    align-items: center;
     text-align: left;
-
-    padding: 20px;
-    line-height: 1.6;
 }
 
-.socialmedia img {
-
-    width: 40px;
-
-    margin: 0 10px;
-
-    transition: transform 0.3s;
+.history-container img {
+    width: 100%;
+    height: auto;
 }
 
-*/ .socialmedia img:hover {
-    transform: scale(1.1);
+/* --- ADVENTURES SECTION (Flexbox - Instrucción 8) --- */
+.adventures h2 {
+    text-align: center;
+    margin: 2rem auto 0 auto;
+    color: white;
+    background-color: rgba(38, 45, 83, 0.8);
+    width: 900px;
+    max-width: 100%;
+    padding: 15px;
+}
+
+.adventure-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.adventure-gallery figure {
+    width: 150px;
+    /* Tamaño consistente para las 5 imágenes */
+    text-align: center;
+}
+
+.adventure-gallery img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+.adventure-gallery figcaption {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* --- FOOTER (Instrucción 9) --- */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .socialmedia {
     display: flex;
-    justify-content: center;
-    padding: 20px;
+    gap: 15px;
+}
+
+.socialmedia img {
+    width: 30px;
 }
