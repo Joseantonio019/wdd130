@@ -79,13 +79,13 @@ nav a:hover {
     padding: 1.5rem;
     border-radius: 10px;
     color: #000000;
-    /* Texto negro */
+
 }
 
 .contact-card h2 {
     font-size: 1.8rem;
     color: #000000;
-    /* Negro */
+
     margin-bottom: 1rem;
 }
 
@@ -94,19 +94,18 @@ nav a:hover {
     line-height: 1.6;
     font-size: 1.1rem;
     color: #000000;
-    /* Negro */
 }
 
 .contact-card a {
     color: #000000;
-    /* Enlaces negros */
+
     font-weight: bold;
     text-decoration: none;
 }
 
 .contact-card a:hover {
     color: #333333;
-    /* Un gris oscuro al pasar el mouse */
+
     text-decoration: underline;
 }
 
